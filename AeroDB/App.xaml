@@ -1,0 +1,61 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AeroDB"
+             x:Class="AeroDB.App"
+             xmlns:styles="clr-namespace:AeroDB.Resources.Styles">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <styles:NullToBoolConverter x:Key="NullToBoolConverter" />
+            <styles:StringNotNullOrEmptyConverter x:Key="StringNotNullOrEmptyConverter"/>
+            <styles:UppercaseBehavior x:Key="UppercaseBehavior"/>
+
+            <Color x:Key="ThemeGray">#F5F5F5</Color>
+            <Color x:Key="ThemeBlue">#0831C1</Color>
+            <Color x:Key="UnEnabledBlue">#7793F9</Color>
+
+            <Style x:Key="ButtonNavigation" TargetType="Button">
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                        <Setter Property="HeightRequest" Value="50" />
+                        <Setter Property="FontSize" Value="28"/>
+                        <Setter Property="Background" Value="{StaticResource ThemeBlue}" />
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                        <Setter Property="BackgroundColor" Value="{StaticResource ThemeGray}" />
+                        <Setter Property="TextColor" Value="{StaticResource ThemeGray}" />
+                        <Setter Property="BorderColor" Value="{StaticResource ThemeGray}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="ButtonAction" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="FontSize" Value="18"/>
+                <!--<Setter Property="IsEnabled" Value="{Binding Source={RelativeSource Self}, Path=Text.Length, Converter={StaticResource StringNotNullOrEmptyConverter}}" />-->
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+
+                        <Setter Property="Background" Value="{StaticResource ThemeBlue}" />
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                        <Setter Property="TextColor" Value="{StaticResource ThemeGray}"/>
+                        <Setter Property="BackgroundColor" Value="{StaticResource UnEnabledBlue}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="PartEntry" TargetType="Entry">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Style.Behaviors>
+                    <styles:UppercaseBehavior/>
+                </Style.Behaviors>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AeroDB.View.Part"
+             xmlns:model="clr-namespace:AeroDB.Model"
+             xmlns:viewmodel="clr-namespace:AeroDB.ViewModel"
+             xmlns:view="clr-namespace:AeroDB.View"
+             x:DataType="viewmodel:PartViewModel"
+             Title="Part">
+    <Grid
+        Padding="50"
+        BackgroundColor="{StaticResource ThemeGray}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image 
+            Source="helicopter_b.png" 
+            Grid.Row="0"
+            Grid.Column="0"
+            HeightRequest="156"
+            WidthRequest="229"/>
+        <Image 
+            Source="user_icon.png" 
+            SemanticProperties.Description="User info"
+            Grid.Row="0"
+            Grid.Column="4"
+            HeightRequest="50"
+            WidthRequest="50"
+            HorizontalOptions="End"
+            VerticalOptions="Start"/>
+        <Label
+            Grid.Row="0" 
+            Grid.Column="4" 
+            Text="{Binding User.UserName}" 
+            FontSize="18" 
+            TextColor="{StaticResource ThemeBlue}" 
+            VerticalOptions="End" 
+            HorizontalOptions="End"/>
+        <Label 
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Text="{Binding Title}"
+            FontSize="56"
+            TextColor="{StaticResource ThemeBlue}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button 
+            Clicked="OnPartInfo"
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Info" 
+            Style="{StaticResource ButtonNavigation}"/>
+        <Button
+            IsEnabled="{Binding User.PartAlter}"
+            Clicked="OnPartEdit"
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Edit" 
+            Style="{StaticResource ButtonNavigation}"/>
+        <Button 
+            IsEnabled="{Binding User.PartAlter}"
+            Clicked="OnPartAdd"
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="Add new part" 
+            Style="{StaticResource ButtonNavigation}"/>
+        <Button 
+            Command="{Binding ReturnHomeCommand}"
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Back" 
+            Style="{StaticResource ButtonNavigation}"/>
+        <ContentView 
+            x:Name="PartViewContainer" 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            Grid.RowSpan="5" 
+            Grid.ColumnSpan="4" />
+    </Grid>
+</ContentPage>

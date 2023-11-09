@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:AeroDB.Model"
+             xmlns:viewmodel="clr-namespace:AeroDB.ViewModel"
+             xmlns:view="clr-namespace:AeroDB.View"
+             xmlns:parent="AeroDB.View.Part"
+             x:DataType="viewmodel:PartViewModel"
+             x:Class="AeroDB.View.PartEdit">
+    <Grid 
+        BackgroundColor="{StaticResource ThemeGray}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Entry
+            Text="{Binding PartNum, Mode=TwoWay}"
+            Grid.Row="0" 
+            Grid.Column="1" 
+            Grid.RowSpan="2"
+            MaxLength="20"
+            Placeholder="Part Number" 
+            Style="{StaticResource PartEntry}"/>
+        <Button
+            Command="{Binding GetPartCommand}"
+            CommandParameter="{Binding PartNum}"
+            Grid.Row="0" 
+            Grid.Column="2" 
+            Grid.RowSpan="2"
+            Text="Search" 
+            Style="{StaticResource ButtonAction}"/>
+        <Label
+            Grid.Row="2" 
+            Grid.Column="1" 
+            HeightRequest="50" 
+            Text="Part number:" 
+            HorizontalOptions="End" 
+            Margin="0,0,10,0" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="2"
+            HeightRequest="50"
+            Text="{Binding DetailPart.PartNumber}"
+            IsVisible="{Binding DetailPart, Converter={StaticResource NullToBoolConverter}}" 
+            HorizontalOptions="Start"/>
+        <Label
+            Grid.Row="3" 
+            Grid.Column="1" 
+            HeightRequest="50" 
+            Text="Description:" 
+            HorizontalOptions="End" 
+            Margin="0,0,10,0" />
+        <Entry
+            x:Name="DescriptionEntry"
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="3"
+            Text="{Binding DetailPart.PartDescription}"
+            IsVisible="{Binding DetailPart, Converter={StaticResource NullToBoolConverter}}" 
+            MaxLength="50"
+            HorizontalOptions="Start"
+            Style="{StaticResource PartEntry}"/>
+        <Label
+            Grid.Row="4" 
+            Grid.Column="1" 
+            HeightRequest="50" 
+            Text="Program code: " 
+            HorizontalOptions="End" 
+            Margin="0,0,10,0" />
+        <Picker
+            Grid.Row="4"
+            Grid.Column="2"
+            HeightRequest="50"
+            ItemsSource="{Binding Programs}"
+            SelectedItem="{Binding DetailPart.ProgramCode, Mode=TwoWay}"
+            IsVisible="{Binding DetailPart, Converter={StaticResource NullToBoolConverter}}" 
+            HorizontalOptions="Start"/>
+        <Label
+            Grid.Row="5" 
+            Grid.Column="1" 
+            HeightRequest="50" 
+            Text="Source code: " 
+            HorizontalOptions="End" 
+            Margin="0,0,10,0" />
+        <Picker
+            Grid.Row="5"
+            Grid.Column="2"
+            HeightRequest="50"
+            ItemsSource="{Binding Sources}"
+            SelectedItem="{Binding DetailPart.SourceCode, Mode=TwoWay}"
+            IsVisible="{Binding DetailPart, Converter={StaticResource NullToBoolConverter}}" 
+            HorizontalOptions="Start"/>
+        <Label 
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Text="{Binding Status}"/>
+        <Button
+            Command="{Binding EditPartCommand}"
+            Grid.Row="5" 
+            Grid.Column="3" 
+            Grid.RowSpan="2"
+            Text="Save" 
+            Style="{StaticResource ButtonAction}">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference DescriptionEntry}, Path=Text.Length}" Value="0">
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</ContentView>

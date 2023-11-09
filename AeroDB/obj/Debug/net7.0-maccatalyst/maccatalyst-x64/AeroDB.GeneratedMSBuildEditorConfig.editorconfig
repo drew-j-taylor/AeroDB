@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AeroDB
+build_property.ProjectDir = C:\Users\drewt\source\repos\aerodb\AeroDB\
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Home.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Login.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/Part.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.Part.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Part.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Part.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/PartAdd.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.PartAdd.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PartAdd.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PartAdd.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/PartEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.PartEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PartEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PartEdit.xaml
+
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/PartInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.PartInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PartInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PartInfo.xaml

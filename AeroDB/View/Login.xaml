@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AeroDB.View.Login"
+             xmlns:model="clr-namespace:AeroDB.Model"
+             xmlns:viewmodel="clr-namespace:AeroDB.ViewModel"
+             x:DataType="viewmodel:LoginViewModel"
+             Title="NewPage1"
+             BackgroundColor="{StaticResource ThemeGray}">
+    <Grid 
+            Padding="10"
+            BackgroundColor="{StaticResource ThemeGray}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="{Binding Title}" 
+            HorizontalTextAlignment="Center"
+            FontSize="56" 
+            TextColor="{StaticResource ThemeBlue}"/>
+        <Entry 
+            Grid.Row="1"
+            Grid.Column="1"
+            HeightRequest="10"
+            Placeholder="Username"
+            Text="{Binding Username, Mode=TwoWay}"
+            FontSize="22"/>
+        <Entry 
+            IsPassword="true"
+            Grid.Row="2"
+            Grid.Column="1"
+            HeightRequest="10"
+            Text="{Binding Password, Mode=TwoWay}"
+            Placeholder="Password"/>
+        <Button 
+            Command="{Binding LoginGetUserCommand}"
+            Grid.Row="3"
+            Grid.Column="1"
+            HeightRequest="75"
+            Text="Login" 
+            FontSize="28"
+            BackgroundColor="{StaticResource ThemeBlue}"/>
+        <Label
+            Grid.Row="4" 
+            Grid.Column="1" 
+            Text="{Binding Status}" />
+        <!--<Button.CommandParameter>
+            <MultiBinding>
+                <Binding Path="username"/>
+                <Binding Path="password"/>
+            </MultiBinding>
+        </Button.CommandParameter>-->
+
+    </Grid>
+</ContentPage>
