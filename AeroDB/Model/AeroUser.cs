@@ -17,7 +17,7 @@ namespace AeroDB.Model
         public string Password { get; set; }
 
         public bool PartAlter { get; set; }
-        public bool BomAlter { get; set; }
+        public bool AssyAlter { get; set; }
         public bool WoAlter { get; set; }
         public bool InventoryAlter { get; set; }
     }

@@ -44,6 +44,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.Resources.Styles.St
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/drewt/source/repos/aerodb/AeroDB/View/AssyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.AssyView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AssyView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AssyView.xaml
+
 [C:/Users/drewt/source/repos/aerodb/AeroDB/View/Home.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AeroDB.View.Home.xaml

@@ -13,7 +13,7 @@ namespace AeroDB.Model
             UserName = username;
             Password = password;
             PartAlter = false;
-            BomAlter = false;
+            AssyAlter = false;
             WoAlter = false;
             InventoryAlter = false;
         }

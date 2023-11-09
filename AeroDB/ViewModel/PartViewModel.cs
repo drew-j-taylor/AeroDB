@@ -145,12 +145,12 @@ namespace AeroDB.ViewModel
             if (add < 1) { Status = "Add failed, try again"; return; }
         }
 
-        [RelayCommand]
-        async Task ReturnHome()
-        {
-            if (IsBusy) { return; }
-            var viewModel = new HomeViewModel();
-            Application.Current.MainPage = new Home(viewModel);
-        }
+        //[RelayCommand]
+        //async Task ReturnHome()
+        //{
+        //    if (IsBusy) { return; }
+        //    var viewModel = new HomeViewModel();
+        //    Application.Current.MainPage = new Home(viewModel);
+        //}
     }
 }

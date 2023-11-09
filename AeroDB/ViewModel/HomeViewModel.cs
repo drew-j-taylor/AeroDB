@@ -23,5 +23,12 @@ namespace AeroDB.ViewModel
             var viewModel = new PartViewModel(new Service.PartService());
             Application.Current.MainPage = new Part(viewModel);
         }
+
+        [RelayCommand]
+        async Task GoToAssy()
+        {
+            var viewModel = new AssyViewModel(new Service.PartService());
+            Application.Current.MainPage = new AssyView(viewModel);
+        }
     }
 }

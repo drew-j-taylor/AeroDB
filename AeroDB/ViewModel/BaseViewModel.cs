@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 //using Windows.System;
 using AeroDB.Model;
+using AeroDB.View;
 
 namespace AeroDB.ViewModel
 {
@@ -28,5 +30,13 @@ namespace AeroDB.ViewModel
         /// Gets a value indicating whether the ViewModel is not in a "busy" state.
         /// </summary>
         public bool IsNotBusy => !IsBusy;
+
+        [RelayCommand]
+        async Task ReturnHome()
+        {
+            if (IsBusy) { return; }
+            var viewModel = new HomeViewModel();
+            Application.Current.MainPage = new Home(viewModel);
+        }
     }
 }
